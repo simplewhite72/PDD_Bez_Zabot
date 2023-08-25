@@ -2,7 +2,7 @@
 FROM python:3.8
 
 # Set the working directory
-WORKDIR /opt/PDD_Bez_Zabot
+WORKDIR /opt/bot
 
 # Copy the requirements file into the container
 COPY requirements.txt .
@@ -15,4 +15,4 @@ RUN /opt/bot/venv/bin/pip install -r requirements.txt
 COPY . .
 
 # Start the bot
-CMD ["/opt/PDD_Bez_Zabot/venv/bin/python", "bot.py"]
+CMD ["/opt/bot/venv/bin/python", "bot.py"]
